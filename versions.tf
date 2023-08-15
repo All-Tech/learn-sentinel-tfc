@@ -1,5 +1,13 @@
 terraform {
-  required_providers {
+   required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.63.0"
+    }
+  }
+
+  required_version = ">= 1.1.0"
+ /* required_providers {
     random = {
       source  = "hashicorp/random"
       version = "3.0.1"
@@ -10,14 +18,19 @@ terraform {
     }
   }
 
-  required_version = ">= 0.15"
-
-  backend "remote" {
-    organization = "<YOUR_TERRAFORM_ORG>"
-
+  required_version = ">= 0.15"*/
+cloud {
+    organization = "Camertechdev"
     workspaces {
-      name = "sentinel-example"
+      name = "learn-sentinel-tfc"
     }
   }
+ /* backend "remote" {
+     organization = "Camertechdev"
+
+    workspaces {
+      name = "learn-sentinel-tfc"
+    }
+  }*/
 
 }

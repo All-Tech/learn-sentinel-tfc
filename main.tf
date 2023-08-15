@@ -1,7 +1,22 @@
-provider "aws" {
+/*provider "aws" {
   region = var.region
+}*/
+provider "azurerm" {
+  use_oidc = true
+  features {}
+    subscription_id      = "6c14d0e8-6b5f-41d2-b35e-d30fce722523"
+    tenant_id            = "6a721ffe-fe18-4f67-87ee-ed57592be919"
+     client_id       = "ab3b82ad-0675-4043-a81b-3f662fea8965"
+      client_secret   = var.client_secret
+    
 }
 
+resource "azurerm_resource_group" "rg" {
+  name     = "myTFResourceGroupgg"
+  location = "westus2"
+}
+
+/*
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -26,3 +41,4 @@ resource "aws_instance" "ubuntu" {
     Name = var.instance_name
   }
 }
+*/
