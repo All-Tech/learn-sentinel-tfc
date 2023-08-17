@@ -1,7 +1,10 @@
-/*provider "aws" {
+
+provider "aws" {
   region = var.region
-}*/
-provider "azurerm" {
+     access_key = "AKIASGEMLXALOJDTD2JZ"
+  secret_key = "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"
+}
+/*provider "azurerm" {
   use_oidc = true
   features {}
     subscription_id      = "6c14d0e8-6b5f-41d2-b35e-d30fce722523"
@@ -14,9 +17,9 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroupgg"
   location = "westus2"
-}
+}*/
 
-/*
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -41,4 +44,3 @@ resource "aws_instance" "ubuntu" {
     Name = var.instance_name
   }
 }
-*/

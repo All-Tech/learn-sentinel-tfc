@@ -1,13 +1,6 @@
 terraform {
-   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "~> 3.63.0"
-    }
-  }
-
-  required_version = ">= 1.1.0"
- /* required_providers {
+ 
+  required_providers {
     random = {
       source  = "hashicorp/random"
       version = "3.0.1"
@@ -18,7 +11,7 @@ terraform {
     }
   }
 
-  required_version = ">= 0.15"*/
+  required_version = ">= 0.15"
 cloud {
     organization = "Camertechdev"
     workspaces {
